@@ -1,0 +1,49 @@
+{% extends 'aplicacion/base.html' %}
+{% load static %}
+
+
+{% block titulo %}
+    <h3>Reservaciones</h3>
+{% endblock titulo %}
+
+
+{% block contenido %}
+<h1>Mesas disponibles:</h1>
+
+<table class="table table-success table-striped">
+    <thead>
+        <tr>
+            <th>Mesa</th>
+            <th>Apellido</th>
+            <th>Nombre</th>
+            <th>Cantidad</th>
+            <th>Observaciones</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+{% for r in reservas %}
+        <tr>
+            <td>{{ r.id }}</td>
+            <td>{{ r.apellido }}</td>
+            <td>{{ r.nombre }}</td>
+            <td>{{ r.comensales }}</td>
+            <td>{{ r.observacion }}</td>
+            
+        </tr>
+        
+{% endfor %}
+    </tbody>         
+</table>
+
+
+{% endblock contenido %}
+    
+
+{% block menu %}
+    <h2>Disfruta de nuesto menú del día:</h2>
+ 
+
+    <h3>¡Patatas millonarias del Tio Moe!</h3>
+{% endblock menu %}
+       

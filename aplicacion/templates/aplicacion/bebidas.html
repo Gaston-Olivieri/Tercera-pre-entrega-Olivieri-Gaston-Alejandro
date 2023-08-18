@@ -1,0 +1,40 @@
+{% extends 'aplicacion/base.html' %}
+{% load static %}
+
+
+{% block titulo %}
+    <h3>Bebidas</h3>
+{% endblock titulo %}
+
+
+{% block contenido %}
+<h1>Opciones:</h1>
+    <table class="table table-success table-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Valor</th>
+            </tr>
+        </thead>
+        <tbody>
+    {% for b in bebidas %}
+            <tr>
+            <td>{{ b.id }}</td>
+            <td>{{ b.nombre }}</td>
+            <td>{{ b.valor }}</td>
+            </tr>
+        
+    {% endfor %} 
+        </tbody>        
+    </table>
+{% endblock contenido %}
+    
+
+{% block menu %}
+    <h2>Disfruta de nuesto menú del día:</h2>
+ 
+
+    <h3>¡Patatas millonarias del Tio Moe!</h3>
+{% endblock menu %}
+       

@@ -1,0 +1,41 @@
+{% extends 'aplicacion/base.html' %}
+{% load static %}
+
+
+{% block titulo %}
+    <h3>Carta Menú</h3>
+{% endblock titulo %}
+
+
+{% block contenido %}
+<h1>Opciones:</h1>
+
+    <table class="table table-success table-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Valor</th>
+            </tr> 
+        </thead>
+        <tbody>
+    {% for m in carta_menú %}
+            <tr>
+                <td>{{ m.id }}</td>
+                <td>{{ m.nombre }}</td>
+                <td>{{ m.valor }}</td>
+            </tr>      
+    {% endfor %} 
+        </tbody>       
+    </table>
+{% endblock contenido %}
+
+
+{% block menu %}
+    <h2>Disfruta de nuesto menú del día:</h2>
+ 
+
+    <h3>¡Patatas millonarias del Tio Moe!</h3>
+{% endblock menu %}
+       
+   

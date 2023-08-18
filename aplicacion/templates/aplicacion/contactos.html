@@ -1,0 +1,45 @@
+{% extends 'aplicacion/base.html' %}
+{% load static %}
+
+
+{% block titulo %}
+    <h3>Contactos</h3>
+{% endblock titulo %}
+
+
+{% block contenido %}
+<h1>Encuentranos en:</h1>
+    <table class="table table-success table-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Sucursal</th>
+                <th>Dirección</th>
+                <th>Tel. Sucucursal</th>
+                <th>Tel. delivery</th>
+                <th>Gerente</th>
+            </tr>
+        </thead>
+        <tbody>
+    {% for c in contactos %}
+            <tr>
+                <td>{{ c.id }}</td>
+                <td>{{ c.sucursal }}</td>
+                <td>{{ c.direccion }}</td>
+                <td>{{ c.telefono }}</td>
+                <td>{{ c.delivery }}</td>
+                <td>{{ c.gerente }}</td>
+            </tr>
+            
+    {% endfor %}
+        </tbody>         
+    </table>
+{% endblock contenido %}
+    
+
+{% block menu %}
+    <h2>Disfruta de nuesto menú del día:</h2>
+ 
+
+    <h3>¡Patatas millonarias del Tio Moe!</h3>
+{% endblock menu %}

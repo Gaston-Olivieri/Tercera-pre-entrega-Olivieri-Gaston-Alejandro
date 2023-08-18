@@ -1,0 +1,28 @@
+{% extends 'aplicacion/base.html' %}
+{% load static %}
+
+
+{% block titulo %}
+    <h3>Buscar Reservas</h3>
+{% endblock titulo %}
+
+
+{% block contenido %}
+    <h1>Buscar Reservas</h1>
+    <form action="/buscar2" method="get">
+        {% csrf_token %}
+        <p>Buscar: <input type="text" name="buscar" id="buscar"></p>
+        <input type="submit" value="Enviar">
+    </form>   
+
+
+
+{% endblock contenido %}
+    
+
+{% block menu %}
+    <h2>Disfruta de nuesto menú del día:</h2>
+ 
+
+    <h3>¡Patatas millonarias del Tio Moe!</h3>
+{% endblock menu %}
